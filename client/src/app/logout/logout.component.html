@@ -1,0 +1,11 @@
+<div *ngIf="(isLoggedIn | async);else other_content">
+  <p>You are currently logged in!</p>
+
+  <p>
+    <button class="btn btn-default" (click)="logoutClick()">Logout</button>
+  </p>
+</div>
+
+<ng-template #other_content>
+  You are not logged in!
+</ng-template>
